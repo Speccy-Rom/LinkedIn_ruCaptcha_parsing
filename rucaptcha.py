@@ -21,6 +21,7 @@ BASE64_FILE — тело файла капчи в формате base64.
 """
 
 
+
 import base64
 import requests
 
@@ -29,9 +30,10 @@ encoded_image = base64.b64encode(CAPTCHA)
 
 
 answer = requests.post(
-    f"https://rucaptcha.com/in.php",
+    "https://rucaptcha.com/in.php",
     json={"key": YOUR_APIKEY, "method": "base64", "body": encoded_image},
 )
+
 
 CAPTCHA_ID = answer['id']
 

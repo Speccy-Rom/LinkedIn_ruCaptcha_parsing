@@ -27,7 +27,7 @@ password_field.send_keys('YOUR_PASSWORD')
 submit_button.click()
 
 ## проходим по страницам поиска и отправим всем людям по списку сообщения с предложением о работе.
-script = "window.scrollTo(0, {});".format(2000)
+script = 'window.scrollTo(0, 2000);'
 driver.execute_script(script)
 
 search_lists = driver.find_element_by_css_selector('.search-results__list')
